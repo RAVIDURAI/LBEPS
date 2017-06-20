@@ -1,0 +1,34 @@
+write the logic to check total male and female
+ans:
+1.start 
+2. enter male or female details
+3.total no of male (count)
+4.total no of female(count)
+5.result
+6.stop 
+
+write the logic to check how many citizens are graduate
+ans:
+1.start
+2.enter the graduate details
+3.total no of graguate(count)
+4.total no of not graduate(count)
+5.result
+6.stop
+
+write how many citizens having income more then 1 lack
+ans;
+1.start
+2.enter the income of the persons per month
+3.if the income>100000
+4.toal no of person
+5.result
+6.stop
+
+write the logic to check married&unmarried
+1.start
+2.enter the married &unmarried details
+3.total no of married
+4.total no of unmarried
+5.result
+6.stop
