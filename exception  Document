@@ -1,0 +1,40 @@
+package timepass01;
+
+import java.util.Scanner;
+
+class No extends Exception {
+		No()
+		{
+			System.out.println("\n invalid");
+		}
+	}
+	public class Nogreaterthan10 {
+	public static void main(String[] args) {
+for(int i=1;i<=10;i++){
+	
+
+int no;
+Scanner sc=new Scanner(System.in);
+System.out.println("enter the no");
+no=sc.nextInt();
+if(no<=10){
+
+try 
+{
+	
+	throw new No ();
+}
+	
+	catch (No e)
+{
+		System.out.println("Exception rised");
+}
+
+}
+else 
+{
+	System.out.println("valid");
+}
+	}}
+	
+}
