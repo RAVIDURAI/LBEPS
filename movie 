@@ -1,0 +1,309 @@
+                                   
+                                        2.Student details to above 21 age count&similar city student name &count are display
+package timepass;
+
+import java.util.Scanner;
+
+public class Dataaaa {
+	 public static void main(String args[]){
+Scanner h=new Scanner(System.in);
+int count=0;int no=0;
+for(int i=1;i<=3;i++){
+System.out.println("enter the Id");
+String id=h.next();
+
+System.out.println("enter the name");
+String name=h.next();
+
+
+System.out.println("enter the age");
+int age=h.nextInt();
+
+	System.out.println("city");
+	String city=h.next();
+
+	System.out.println("enter the country");
+	String country=h.next();
+
+	System.out.println("enter the sno");
+	int sno=h.nextInt();
+	System.out.println("Id   :"+id+"     name:   "+name+"     age   :"+age+"     city:    "+city+"     country:    "+country+"   sno    "+sno);
+//System.out.println("Id:"+id+"name:"+name+"age:"+age+"city:"+city+"country"+country+"sno"+sno);
+//System.out.println("Id:"+id+"name:"+name+"age:"+age+"city:"+city+"country"+country+"sno"+sno);
+
+if(age>=21){
+	no=no+1;
+	System.out.println( "age above 21 :   "+name+"      above 21 age count  :"+no);
+}
+	else if(city.equals("pune")){
+	count=count+1;
+	System.out.println("no of pune:     "+count  +"  name:    "+ name);
+}
+	else if(city.equals("chennai")){
+	count=count+1;
+	System.out.println("no of chennai:   "+count  +"     name:   "+ name);
+	}
+	else{
+		
+	}
+}
+}
+	 }
+                                            3.employ details and maximum & minimum salary calculated
+package timepass;
+
+import java.util.Scanner;
+
+public class Employ {
+	public static void main(String[] args) {
+		
+for(int i=0;i<=2;i++){
+	int no=0;
+Scanner n=new Scanner(System.in);
+System.out.println("Enter the employ name:");
+String ename=n.next();
+System.out.println("Enter the employ id:");
+String eid=n.next();
+System.out.println("Enter the age:");
+int  eage=n.nextInt();
+System.out.println("Enter the employ Salary:");
+int esalary=n.nextInt();
+System.out.println("Enter the employ department:");
+String edepartment=n.next();
+System.out.println("name:"+     ename+"id:"+     eid+"salary:"+    esalary);
+if (no<esalary){
+	no=esalary+no;
+
+	System.out.println( "max salary"+esalary+"name"+ename);
+}else if(no>esalary){
+
+
+                                   4. MOVIE Name and movie actor details
+package timepass;
+
+import java.util.Scanner;
+
+public class Filim {
+	public static void main(String[] args) {
+		int count=0;int amount=0; int no=0;int v=0;int r=0;int h=0;int o=0;
+
+		for(int i=0;i<2;i++){
+
+Scanner s=new Scanner(System.in);
+System.out.println("enter the movie id");
+String movieid=s.next();
+System.out.println("enter the movie name");
+String moviename=s.next();
+System.out.println("enter the actor name");
+String actorname=s.next();
+System.out.println("enter the director name");
+String director=s.next();
+System.out.println("enter the year of release");
+String dateofrelease=s.next();
+System.out.println("enter the language");
+String language=s.next();
+System.out.println("enter the income");
+int income=s.nextInt();
+System.out.println("enter the rating");
+int  rating=s.nextInt();
+System.out.println("enter the duration");
+String duration =s.next();
+{
+	System.out.println(movieid         +moviename       +rating       );
+	count++;
+	System.out.println("1.movie release count:"+count);
+}
+amount=income+amount;
+System.out.println("2.total income:"+amount);
+if(rating>=4){
+	no++;
+	System.out.println("3.rating:"+rating     +"moviename"+moviename+"count"+no);
+	
+}
+if(language.equals("tamil")){
+	v++;
+	System.out.println("4.tamil movie"+moviename+"count"+v);
+}
+if(language.equals("english")){
+	r++;
+	System.out.println("4.english movie"+moviename+"count"+r);
+}
+if(language.equals("hindi")){
+	h++;
+	System.out.println("4.hindi movie"+moviename+"count"+h);
+}
+if(director.equals("sai")){
+	o++;
+	System.out.println("5.director sai"+moviename+"count"+o);
+}
+
+
+
+	}
+}
+}
+
+                                                       5.Calculator operation
+
+package timepass;
+
+import java.util.Scanner;
+
+public class Calllllc {
+	Scanner n=new Scanner(System.in);
+	
+
+
+void add(){
+	System.out.println("Enter the no 1:");
+	int a=n.nextInt();
+	System.out.println("Enter the no 2:");
+	int b=n.nextInt();
+	int c;
+	c=a+b;
+	System.out.println("addition of  no:              "+c);
+	c=a-b;
+	System.out.println("subraction of no:             "+c);
+    c=a*b;
+    System.out.println("multiply  of no:              "+c);
+    c=a/b;
+    System.out.println("div of no                     "+c );
+    c=(a+b)/2;
+    System.out.println("per of no                     "+c);
+}
+
+	public static void main(String[] args) {
+Calllllc j=new Calllllc();
+j.add();
+	}
+
+}
+
+
+
+                                                        6. Reverse no print
+
+package timepass;
+
+public class Array {
+	public static void main(String[] args) {
+int a[]=new int[5];
+a[0]=23;
+a[1]=34;
+a[2]=4;
+a[3]=34;
+a[4]=467;
+for(int i=0;i<a.length;i++)
+	System.out.print(a[i]);
+for(int j=a.length-1;j>=0;j--)
+	System.out.print(a[j]);
+	
+}
+}
+
+
+
+                                                        7.SALERY details and bonus add to salary
+
+package timepass;
+
+import java.util.Scanner;
+
+public class Salary {
+int amount=0;
+	public static void main(String[] args) {
+		for(int i=0;i<=2;i++){
+
+Scanner g=new Scanner(System.in);
+System.out.println("Enter the name:");
+String  name=g.next();
+System.out.println("Enter the  previous salary:");
+int salary=g.nextInt();
+if(salary==10000){
+	 int  amount=(salary+3000);
+	 System.out.println( "name:"+name        +" this month salary:"+amount);
+}
+else if(salary==50000){
+	 int  amount=(salary+10000);
+	 System.out.println( "name:"+name        +"this month salary:"+amount);
+}
+else if(salary==100000){
+	 int  amount=(salary+10000);
+	 System.out.println( "name:"+name        +"this month salary:"+amount);
+}
+else{
+	System.out.println("process done");
+}
+
+
+	}
+
+}
+}
+                                                 7.  Highest number for 3numbers
+package timepass;
+
+import java.util.Scanner;
+
+public class Highest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	      int a, b, c;
+	      System.out.println("Enter three integers ");
+	      Scanner in = new Scanner(System.in);
+	 
+	      a = in.nextInt();
+	      b = in.nextInt();
+	      c = in.nextInt();
+	 
+	      if ( a> b && a > c)
+	         System.out.println("First number is largest."+a);
+	      else if ( b > a && b> c )
+	         System.out.println("Second number is largest."+b);
+	      else if ( c > a && c > b )
+	         System.out.println("Third number is largest."+c);
+	      else   
+	         System.out.println("Entered numbers are not ");
+
+	}
+
+}
+
+                                                          8.string to convert char 3rd charactor s or not
+package timepass;
+
+import java.util.Scanner;
+
+public class Stri {
+	public static void main(String args[]){  
+		 Scanner in =new Scanner(System.in); 
+		 System.out.println("enter the string");
+		String str =in.next();
+		
+		
+		char[] chars = str.toCharArray();
+		
+		if(chars[2] == 's'){
+			System.out.println("success");
+		} else{
+			System.out.println("Fail");
+		}
+		
+	}
+
+}
+                                                        9.String to covert the 3rd charactor to change T
+package timepass;
+public class Replace {
+
+	public static void main(String[] args) {
+		 String Str=new String("rested");
+
+	      System.out.println(Str.replace('s','T'));
+
+	}
+
+}
+
+
