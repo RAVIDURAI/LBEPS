@@ -1,0 +1,97 @@
+Write a program in java to create User Defined Exception which will allow user to perform bank transaction.
+	1. if user try to withdraw amount > balance program must throw Insufficient fund Exception.
+	2. Before withdraw or deposit user must enter pin, if pin is not valid then program must throw invalid pin exception.
+	3. User cannot deposit > Rs. 200000 without PAN details, if pan details are not provided program must raise exception saying InvalidTransaction
+package timepass02;
+
+import java.util.Scanner;
+
+class InvalidpinException extends Exception{
+	InvalidpinException(){
+		System.out.println("Exception occured in userdefine");
+	}
+		
+	}
+class InsufficentfundException extends Exception{
+	InsufficentfundException(){
+		System.out.println("Exception occured in user");
+	}
+}
+class InvalidtransactionException extends Exception{
+	InvalidtransactionException(){
+		System.out.println("Exception occured in userdefine");
+	}
+
+}
+public class Bankdetails {
+	public static void main(String[] args) {
+		Scanner s=new Scanner (System.in);
+
+System.out.println("enter the pin no");
+int j=s.nextInt();
+
+	if(j==1234){
+
+	System.out.println("continue");
+	
+	System.out.println("Enter the amount" );
+int amount=s.nextInt();
+ if(amount<=20000){
+
+	int balance=0;
+	 balance= balance+amount;
+	
+	
+		System.out.println("Your balance added"+balance);	
+System.out.println("enter the withdraw amount");
+int k=s.nextInt();
+if(k<balance){
+
+	balance= balance-k;
+	
+	System.out.println("now your balance"+balance);
+	System.out.println("finish the process");
+}
+else{
+	 try{
+	 	
+	 	throw new InsufficentfundException();
+
+	 }catch (InsufficentfundException  e){
+	 	System.out.println(e);
+
+	 }
+	 System.out.println("thank you");
+
+	 }
+	 }
+else if(amount>20000){
+	System.out.println(" include a pan details");
+	try{
+		throw new InvalidtransactionException();
+
+	}catch (InvalidtransactionException e){
+		System.out.println(e);
+
+	}
+	System.out.println("thank you");
+	
+	}
+
+
+	}
+
+	else	{	try{
+			
+			throw new InvalidpinException();
+
+		}catch (InvalidpinException e){
+			System.out.println(e);
+
+		}
+		System.out.println("thank you");
+	}
+	}
+}
+
+
