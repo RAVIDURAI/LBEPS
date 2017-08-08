@@ -1,0 +1,162 @@
+Hierarical in inheritence
+package Raviiii;
+
+import java.util.Scanner;
+
+class Motors
+{	Scanner n=new Scanner("System.in");
+
+	void ser()
+
+	{
+		System.out.println("welcome");
+	}
+	
+}
+class Car extends Motors{
+	String name;
+
+	void set()
+	{
+		System.out.println(" your need car details");
+
+	/*name=n.next();
+	boolean yes=true;
+	if(!true){		System.out.println("ok");
+}
+	else{
+
+		System.out.println("Acura/n,Alfa RomeoAston Martin,Audi'Bentley,BMW,Bugatti,Buick.");
+	
+	}*/
+}
+
+		// TODO Auto-generated method stub
+		
+
+
+}
+   class Bike extends Motors{
+	String nat;
+	void reter()
+	{
+		System.out.println(" your need bike details");
+
+	nat=n.next();
+	boolean nat=true;
+	if(true){
+		System.out.println("Honda Hero Moto Corp,Yamaha Royal EnfieldSuzuki KTM");
+	}
+	else{
+		System.out.println("ok");
+	}
+}
+
+		// TODO Auto-generated method stub
+		
+	
+
+}
+
+public  class Hierarical {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Bike b=new Bike();
+b.ser();
+//b.set();
+b.reter();
+	}
+
+
+}
+  
+
+Multilevel
+package Raviiii;
+
+import java.util.Scanner;
+class Hero{
+	int no;
+	Scanner sc=new Scanner(System.in);
+	void rat() {
+		System.out.println("enter the rollno:");
+	no=sc.nextInt();
+	}
+}	
+class Honda extends Hero{
+	String name;
+	void rrrr(){
+		System.out.println("enter the name:");
+		name=sc.next();
+	}
+}
+
+ class Activa extends Honda{
+	double cgpa;
+	void dddd(){
+		System.out.println("enter the cgpa:");
+		cgpa=sc.nextFloat();
+		if(cgpa>=65.00){
+			System.out.println("you are elliglble");
+		}
+		else{
+			System.out.println("you are not elligible");
+		}
+	}
+}
+ 
+
+//if(cgpa>=65.00){
+	//System.out.println("u are elligible");
+//}
+//else{
+	//System.out.println("u are not elligible");
+//}
+public class Multilevel {
+
+	public static void main(String[] args)
+	{
+Activa S=new Activa();
+S.rat();
+S.rrrr();
+S.dddd();
+{
+	System.out.println("process done");
+}
+}
+}
+
+single inheritence
+package Raviiii;
+	
+
+ class Student1 {
+	void data()
+	{
+		System.out.println("name=wwwww          "       +"cgpa=000         ");
+	}
+ }
+
+	class Man extends Student1{
+		void reg(){
+			System.out.println("salery=30000        "+"experience=5years        ");
+		}
+	}
+	 public class Inheritence
+	{
+		public static void main(String[] args) {
+
+			// TODO Auto-generated method stub
+	    Man M=new Man();
+	       
+	       M.data();
+	       M.reg();
+		}
+}
+
+
+
+		
+
+
