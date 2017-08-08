@@ -1,0 +1,301 @@
+Write a program to create a web page to accept citizen details of India like :-
+
+1.  AadharCardNumber  -- String -- 
+2.  Name      -- String -- 
+3.  Gender    -- String -- 
+4.  DateOfBirth    -- String -- 
+5.  Address   -- String -- 
+6.  City      -- String -- 
+7.  Country   -- String -- 
+8.  Pin       -- String -- 
+9.  Phone     -- String -- 
+10. EducationDetails -- String Array
+11. Age       -- String -- 
+12. WorkingStatus -- String -- 
+13. MaritalStatus -- String -- 
+14. Salary 	-- String -- 
+15. NUmberOfDependents -- String -- 
+
+Analysis
+
+1. Add at least 10 records and store the data in file seperated by delimeter like comma and space
+2. After storing the data kindly read the data from file and do below analysis
+	1. Display total citizens eligible for voting
+	2. Display total male and female eligible for voting
+	2. Display total citizens who are not working
+	3. Display total citizens who are married
+	4. Display total citizens whose salary is above 10000
+	5. Display total citizen who eligible for pension and coming under Senior Citizen category
+	6. Display total citizen whose dependents are more than 4
+	7. Display total graduate citizens.
+package timepass02;
+
+import timepass02.Customer.CustomerBuilder;
+
+public class Aadhardetails {
+	public final String no;
+	public final String name;
+	public final String gender;
+	public final String dob;
+	public final String address;
+	public final String city;
+	public final String country;
+	public final String pin;
+	public final String phone;
+	public final String educationaldetails;
+	public final int  age;
+	public final String workingstatus;
+	public final String maritalstatus;
+	public final String salary;
+	public final String noofdependents;
+
+
+	private Aadhardetails(String no,  String name, String gender, String  dob, String address, String city, String country,
+			String pin, String phone, String educationaldetails, int age,String workingstatus,String maritalstatus,String salary,String noofdependents) {
+		this.no = no;
+		this.name = name;
+		this.gender = gender;
+		this.dob = dob;
+		this.address = address;
+		this.city = city;
+		this.country = country;
+		this.pin = pin;
+		this.phone = phone;
+		this.educationaldetails = educationaldetails;
+		this.age= age;
+		this.workingstatus =workingstatus;
+		this.maritalstatus= maritalstatus;
+		this.salary = salary;
+		this.noofdependents= noofdependents;
+
+	}
+	public String getNo() {
+		return no;
+	}
+	public String getName() {
+		return name;
+	}
+	public String getGender() {
+		return gender;
+	}
+	public String getDob() {
+		return dob;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public String getCity() {
+		return city;
+	}	public String getCountry() {
+		return country;
+	}	public String getPin() {
+		return pin;
+	}	public String getPhone() {
+		return phone;
+	}	public String getEducationaldetails() {
+		return educationaldetails;
+		
+	}		public int getAge() {
+		return age;
+	}
+	public String getWorkingstatus() {
+		return workingstatus;
+	}	public String getMaritalstatus() {
+		return maritalstatus;
+	}	public String getSalary() {
+		return salary;
+	}	public String getNoofdependents() {
+		return noofdependents;
+	}
+	static class AadhardetailsBuilder {
+		private String no;
+		private String name;
+		private String gender;
+		private String dob;
+		private String address;
+		private String city;
+		private String country;
+		private String pin;
+		private String phone;
+		private String educationdetails;
+		private int age;
+		private String workingstatus;
+	    private String maritalstatus;
+	    private String salary;
+	    private String noofdependents;
+
+	public AadhardetailsBuilder addNo(String no) {
+		this.no = no;
+		return this;
+
+	}
+	public AadhardetailsBuilder addName(String name) {
+		this.name = name;
+		return this;
+
+	}	public AadhardetailsBuilder addGender(String gender) {
+		this.gender= gender;
+		return this;
+
+	}	public AadhardetailsBuilder addDob(String dob) {
+		this.dob = dob;
+		return this;
+
+	}	public AadhardetailsBuilder addAddress(String address) {
+		this.address = address;
+		return this;
+
+	}	public AadhardetailsBuilder addCity(String city) {
+		this.city = city;
+		return this;
+
+	}	public AadhardetailsBuilder addCountry(String country) {
+		this.country = country;
+		return this;
+
+	}	public AadhardetailsBuilder addPin(String pin) {
+		this.pin= pin;
+		return this;
+
+	}	public AadhardetailsBuilder addPhone(String phone) {
+		this.phone = phone;
+		return this;
+
+	}	public AadhardetailsBuilder addEducationdetails(String educationdetails) {
+		this.educationdetails = educationdetails;
+		return this;
+	}	public AadhardetailsBuilder addAge(int age) {
+		this.age = age;
+		return this;
+	}
+	public AadhardetailsBuilder addWorkingstatus(String workingstatus) {
+		this.workingstatus= workingstatus;
+		return this;
+
+	}	public AadhardetailsBuilder addMaritalstatus(String maritalstatus ) {
+		this.maritalstatus = maritalstatus;
+		return this;
+
+
+	}	public AadhardetailsBuilder addSalary(String salary) {
+		this.salary= salary;
+		return this;
+
+	}	public AadhardetailsBuilder addDependent(String noofdependents) {
+		this.noofdependents = noofdependents;
+		return this;
+
+	}
+
+	public Aadhardetails build() {
+		return new Aadhardetails( no, name, gender, dob,address, city, country, pin, phone,educationdetails,age,workingstatus,maritalstatus,salary,noofdependents);
+	
+	}
+
+
+	}	
+
+}
+package timepass02;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import timepass02.Aadhardetails.AadhardetailsBuilder;
+
+public class Aadhar {
+
+	public static void main(String[] args) {
+		int k=0;int h=0;int g=0;int a=0;int o=0;int e=0;int t=0;int v=0;
+
+		try (Scanner rd = new Scanner(System.in)) {
+			System.out.println("enter the records");
+			List<Aadhardetails> Aad = new ArrayList<>();
+			int count = rd.nextInt();
+			for (int i = 0; i < count; i++){ 
+				Aad.add(getAadhardetails(rd));
+
+			for(Aadhardetails ad: Aad){
+                  if(ad.getAge()>=18){
+                	  k++;
+                	  if(ad.getGender().equals("male")){
+                		 h++;
+                		 
+                	  }
+                	  else if(ad.getGender().equals("female")){
+                		  g++;
+                	  }
+                  }	
+                  if(ad.getWorkingstatus().equals("not working")){
+                	 a++; 
+                  }
+			
+    if (ad.getMaritalstatus().equals("married")){
+        	o++;  
+          }
+    if(Integer.parseInt(ad.getSalary()) >=10000){
+    	e++;
+    }
+     if(Integer.parseInt(ad.getNoofdependents())>4){
+    	t++;
+    }
+    if(ad.getEducationaldetails().equals("grajuate")){
+    	v++;
+    }
+			}	
+			
+		
+	
+			
+			System.out.println("total no of voting elligible persons:    "+k);
+  System.out.println("total no of male elligible:    "+h);			
+	System.out.println("total no of female elligible:    "+g);		
+	System.out.println("total of non working persons:    "+a);		
+	System.out.println("totalmarried:   "+o);
+	System.out.println("salary abon=ve 10000:    "+e);
+	System.out.println("no of dependent more the 4:  "+t);
+	System.out.println("no of grajuate detail:   "+v);
+			
+			}
+		}
+	
+	}
+
+	private static Aadhardetails getAadhardetails(Scanner scanner) {
+		Aadhardetails.AadhardetailsBuilder builder = new AadhardetailsBuilder();
+		System.out.println("enter the no");
+		builder.addNo(scanner.next());
+		System.out.println("enter the name");
+		builder.addName(scanner.next());
+		System.out.println("enter the gender");
+		builder.addGender(scanner.next());
+		System.out.println("enter the date of birth");
+		builder.addDob(scanner.next());
+		System.out.println("enter the address");
+		builder.addAddress(scanner.next());
+		System.out.println("enter the city");
+		builder.addCity(scanner.next());
+		System.out.println("enter the country");
+		builder.addCountry(scanner.next());
+		System.out.println("enter the pin");
+		builder.addPin(scanner.next());
+		System.out.println("enter the phone");
+		builder.addPhone(scanner.next());
+		System.out.println("enter the educationaldetails");
+		builder.addEducationdetails(scanner.next());
+		System.out.println("enter the age");
+		builder.addAge(scanner.nextInt());
+		System.out.println("enter the workingstatus");
+		builder.addWorkingstatus(scanner.next());
+		System.out.println("enter the marital status ");
+		builder.addMaritalstatus(scanner.next());
+		System.out.println("enter the salary");
+		builder.addSalary(scanner.next());
+		System.out.println("enter the noofdependent");
+		builder.addDependent(scanner.next());
+		return builder.build();
+
+	}
+}
+
