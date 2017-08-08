@@ -1,0 +1,64 @@
+package timepass;
+
+import java.util.Scanner;
+
+public class Filim {
+	public static void main(String[] args) {
+		int count=0;int amount=0; int no=0;int v=0;int r=0;int h=0;int o=0;
+
+		for(int i=0;i<2;i++){
+
+Scanner s=new Scanner(System.in);
+System.out.println("enter the movie id");
+String movieid=s.next();
+System.out.println("enter the movie name");
+String moviename=s.next();
+System.out.println("enter the actor name");
+String actorname=s.next();
+System.out.println("enter the director name");
+String director=s.next();
+System.out.println("enter the year of release");
+String dateofrelease=s.next();
+System.out.println("enter the language");
+String language=s.next();
+System.out.println("enter the income");
+int income=s.nextInt();
+System.out.println("enter the rating");
+int  rating=s.nextInt();
+System.out.println("enter the duration");
+String duration =s.next();
+{
+	System.out.println(movieid         +moviename       +rating       );
+	count++;
+	System.out.println("1.movie release count:"+count);
+}
+amount=income+amount;
+System.out.println("2.total income:"+amount);
+if(rating>=4){
+	no++;
+	System.out.println("3.rating:"+rating     +"moviename"+moviename+"count"+no);
+	
+}
+if(language.equals("tamil")){
+	v++;
+	System.out.println("4.tamil movie"+moviename+"count"+v);
+}
+if(language.equals("english")){
+	r++;
+	System.out.println("4.english movie"+moviename+"count"+r);
+}
+if(language.equals("hindi")){
+	h++;
+	System.out.println("4.hindi movie"+moviename+"count"+h);
+}
+if(director.equals("sai")){
+	o++;
+	System.out.println("5.director sai"+moviename+"count"+o);
+}
+
+
+
+	}
+}
+}
+
