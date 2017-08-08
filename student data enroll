@@ -1,0 +1,55 @@
+package timepass;
+
+import java.util.Scanner;
+
+public class Dataaaa {
+	 public static void main(String args[]){
+Scanner h=new Scanner(System.in);
+int count=0;int no=0;
+for(int i=1;i<=3;i++){
+System.out.println("enter the Id");
+String id=h.next();
+
+System.out.println("enter the name");
+String name=h.next();
+
+
+System.out.println("enter the age");
+int age=h.nextInt();
+
+	System.out.println("city");
+	String city=h.next();
+
+	System.out.println("enter the country");
+	String country=h.next();
+
+	System.out.println("enter the sno");
+	int sno=h.nextInt();
+		
+	
+
+	
+System.out.println("Id   :"+id+"     name:   "+name+"     age   :"+age+"     city:    "+city+"     country:    "+country+"   sno    "+sno);
+//System.out.println("Id:"+id+"name:"+name+"age:"+age+"city:"+city+"country"+country+"sno"+sno);
+//System.out.println("Id:"+id+"name:"+name+"age:"+age+"city:"+city+"country"+country+"sno"+sno);
+
+if(age>=21){
+	no=no+1;
+	System.out.println( "age above 21 :   "+name+"      above 21 age count  :"+no);
+}
+	else if(city.equals("pune")){
+	count=count+1;
+	System.out.println("no of pune:     "+count  +"  name:    "+ name);
+}
+	else if(city.equals("chennai")){
+	count=count+1;
+	System.out.println("no of chennai:   "+count  +"     name:   "+ name);
+	}
+	else{
+		
+	}
+}
+}
+	 }
+
+
