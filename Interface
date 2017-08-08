@@ -1,0 +1,38 @@
+package Raviiii;
+	
+
+ class Student1 {
+	void data()
+	{
+		System.out.println("name=wwwww          "       +"cgpa=000         ");
+	}
+ }
+
+	class Man extends Student1{
+		void reg(){
+			System.out.println("salery=30000        "+"experience=5years        ");
+		}
+	}
+	 public class Inheritence
+	{
+		public static void main(String[] args) {
+
+			// TODO Auto-generated method stub
+	    Man M=new Man();
+	       
+	       M.data();
+	       M.reg();
+		}
+}
+
+
+
+		
+package Raviiii;
+
+public interface Hhhhh {
+public void run();
+public void rat();
+ 
+ }
+
