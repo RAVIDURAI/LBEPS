@@ -1,0 +1,120 @@
+                        hive
+2 a) Which part of the US has the most Data Engineer jobs for each year?
+   b) find top 5 locations in the US who have got certified visa for each year.[certified]
+
+a.
+1.select year,count(job_title) as t from h1b_final where job_title='DATA ENGINEER' group by year,job_title order by t;
+
+select worksite,year,count(job_title) as t from h1b_final where job_title='DATA ENGINEER'and year='2011' group by worksite,year order by t
+desc limit 1;
+SAN FRANCISCO, CALIFORNIA	3	2011
+
+
+select worksite,year,count(job_title) as t from h1b_final where job_title='DATA ENGINEER'and year='2012' group by worksite,year order by t
+desc limit 1;
+
+select worksite,year,count(job_title) as t from h1b_final where job_title='DATA ENGINEER'and year='2013' group by worksite,year order by t
+desc limit 1;
+
+
+select worksite,year,count(job_title) as t from h1b_final where job_title='DATA ENGINEER'and year='2014' group by worksite,year order by t
+desc limit 1;
+
+select worksite,year,count(job_title) as t from h1b_final where job_title='DATA ENGINEER'and year='2015' group by worksite,year order by t
+desc limit 1;
+
+select worksite,year,count(job_title) as t from h1b_final where job_title='DATA ENGINEER'and year='2016' group by worksite,year order by t
+desc limit 1;
+b.
+1.select worksite,count(case_status) as t,year from h1b_final where year ='2011' and case_status='CERTIFIED' group by worksite,year order by t desc limit 5;
+2.select worksite,count(case_status) as t,year from h1b_final where year ='2012' and case_status='CERTIFIED' group by worksite,year order by t desc limit 5;
+3.select worksite,count(case_status) as t,year from h1b_final where year ='2013' and case_status='CERTIFIED' group by worksite,year order by t desc limit 5;
+4.select worksite,count(case_status) as t,year from h1b_final where year ='2014' and case_status='CERTIFIED' group by worksite,year order by t desc limit 5;
+5.select worksite,count(case_status) as t,year from h1b_final where year ='2015' and case_status='CERTIFIED' group by worksite,year order by t desc limit 5;
+6.select worksite,count(case_status) as t,year from h1b_final where year ='2016' and case_status='CERTIFIED' group by worksite,year order by t desc limit 5;
+-------========================================================================================================================
+5) Find the most popular top 10 job positions for H1B visa applications for each year?
+a) for all the applications
+b) for only certified applications.
+select year,count(job_title)ad f from h1b_final group by year order by f;
+
+select job_title,year,count(case_status ) as temp from h1b_final where     year = 2011 group by job_title,year  order by temp desc limit 10; 
+select job_title,year,count(case_status ) as temp from h1b_final where     year = 2012 group by job_title,year  order by temp desc limit 10; 
+select job_title,year,count(case_status ) as temp from h1b_finalwhere     year = 2013 group by job_title,year  order by temp desc limit 10; 
+select job_title,year,count(case_status ) as temp from h1b_final where     year = 2014 group by job_title,year  order by temp desc limit 10; 
+select job_title,year,count(case_status ) as temp from h1b_final where     year = 2015 group by job_title,year  order by temp desc limit 10; 
+select job_title,year,count(case_status ) as temp from h1b_final where     year = 2016 group by job_title,year  order by temp desc limit 10;
+b.
+select year,count(job_title) as temp from h1b_final where year=2001 group by job_title,year order by temp desc limit 10; 
+=============================================================================================================================
+7) Create a bar graph to depict the number of applications for each year [All]
+
+select year,count(*)  from h1b_final group by year order by year;
+===============================================================================================================================
+8) Find the average Prevailing Wage for each Job for each Year (take part time and full time separate). Arrange the output in descending order - [Certified and Certified Withdrawn.]
+
+
+
+select job_title,full_time_position,year,avg(prevailing_wage) as average from h1b_final   where full_time_position ='Y' and year='2011' group by job_title,full_time_position,year order by average desc;
+select job_title,full_time_position,year,avg(prevailing_wage) as average from h1b_final   where full_time_position ='N' and year='2011' group by job_title,full_time_position,year order by average desc;
+
+select job_title,full_time_position,year,avg(prevailing_wage) as average from h1b_final   where full_time_position ='Y' and year='2012' group by job_title,full_time_position,year order by average desc;
+select job_title,full_time_position,year,avg(prevailing_wage) as average from h1b_final   where full_time_position ='N' and year='2012' group by job_title,full_time_position,year order by average desc;
+
+select job_title,full_time_position,year,avg(prevailing_wage) as average from h1b_final   where full_time_position ='Y' and year='2013' group by job_title,full_time_position,year order by average desc;
+select job_title,full_time_position,year,avg(prevailing_wage) as average from h1b_final   where full_time_position ='N' and year='2013' group by job_title,full_time_position,year order by average desc;
+
+select job_title,full_time_position,year,avg(prevailing_wage) as average from h1b_final   where full_time_position ='Y' and year='2014' group by job_title,full_time_position,year order by average desc;
+select job_title,full_time_position,year,avg(prevailing_wage) as average from h1b_final   where full_time_position ='N' and year='2014' group by job_title,full_time_position,year order by average desc;
+
+select job_title,full_time_position,year,avg(prevailing_wage) as average from h1b_final   where full_time_position ='Y' and year='2015' group by job_title,full_time_position,year order by average desc;
+select job_title,full_time_position,year,avg(prevailing_wage) as average from h1b_final   where full_time_position ='N' and year='2015' group by job_title,full_time_position,year order by average desc;
+
+select job_title,full_time_position,year,avg(prevailing_wage) as average from h1b_final   where full_time_position ='Y' and year='2016' group by job_title,full_time_position,year order by average desc;
+select job_title,full_time_position,year,avg(prevailing_wage) as average from h1b_final   where full_time_position ='N' and year='2016' group by job_title,full_time_position,year order by average desc;
+==================================================================================================================================
+3)Which industry(SOC_NAME) has the most number of Data Scientist positions?
+[certified]
+
+
+select soc_name,count(job_title) as title from h1b_final where job_title='DATA SCIENTIST' group by soc_name order by title desc limit 1;
+
+select soc_name,case_status,count(job_title) as title from h1b_final where job_title='DATA SCIENTIST'and case_status='CERTIFIED' group by soc_name,case_status order by title  desc limit 3;
+
+STATISTICIANS	CERTIFIED	369
+COMPUTER AND INFORMATION RESEARCH SCIENTISTS	CERTIFIED	283
+OPERATIONS RESEARCH ANALYSTS	CERTIFIED	237
+
+
+===============================================================================================================================
+                           pig
+register /usr/local/hive/lib/hive-exec-1.2.1.jar;
+register /usr/local/hive/lib/hive-common-1.2.1.jar;
+data001 = LOAD 'hdfs://localhost:54310/user/hive/warehouse/finalproject.db/h1b_final' USING PigStorage('\t') as (s_no:double,case_status:chararray,employer_name:chararray,soc_name:chararray,job_title:chararray,full_time_position:chararray,prevailing_wage:double,year:chararray,worksite:chararray,longitude,latitude);
+data002= group data001 by job_title;
+data003= foreach data002 generate group,COUNT($1);
+
+data004= FILTER data001 by case_status=='CERTIFIED';
+data005= group data004 by job_title;
+data006= foreach data005 generate group,COUNT($1);
+
+data007= FILTER data001 by case_status=='CERTIFIED-WITHDRAWN';
+data008= group data007 by job_title;
+data009= foreach data008 generate group,COUNT($1);
+
+data010= join data003 by $0, data006 by $0, data009 by $0;
+
+data011= foreach data010 generate $0,$1,$3,$5;
+data012= foreach data011 generate $0,(float)($2+$3)*100/($1),$1;
+data013= FILTER data012 by $1>70 and $2>1000;
+data014= order data013 by $1 DESC;
+dump data014;
+
+ store data014 into '/home/hduser/Pig/question10' using PigStorage(); 
+========================================================================================================================================
+
+                              mapreduce
+
+hduser@suresh-Inspiron-5548:~$ hadoop fs -cat /niit1/outputIndustry/p*
+
+
